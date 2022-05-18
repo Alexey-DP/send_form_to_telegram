@@ -14,7 +14,7 @@ const forms = (formsBlock, tokenIDname, chatIDname) => {
 
         let text;
 
-        text = encodeURI(`Message from form :)😂\nИмя: ${name}\nТелефон: ${phone}\nСообщение: ${message}`);
+        text = encodeURI(`Message from form :)😂\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`);
 
         postData(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=html`)
             .then(() => {
